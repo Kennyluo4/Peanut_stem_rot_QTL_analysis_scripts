@@ -1,4 +1,6 @@
 '''search SNPs within QTL region'''
+# QTL file with 1st column as QTL name,2nd as chromosome, 4th as start, 6th as end
+# SNP file with 1st column as SNP name, 2nd as chromosome, 3rd as marker position
 res = []
 for lines in open('27_QTL_flankingMarker.txt'):
     items = lines.replace('\n', '').split('\t')
