@@ -99,6 +99,7 @@ skewness(dt$BF15_1, na.rm = TRUE)
 skewness(dt$WF15_1, na.rm = TRUE)
 
 ##anova
+# use non-parametric one-way kruskal test
 fl15 = read.csv('FL2015.csv')
 kt_fl13_broad = kruskal.test(phenotype~rate_time, data = fl13_broad)
 kt_fl14_broad_geno_rate = kruskal.test(phenotype~interaction(fl14_broad$genotype,fl14_broad$rating),data = fl14_broad)
@@ -124,7 +125,7 @@ summary(ano_fl15_bf)
 ano_fl15_wf_1 = aov(phenotype~genotype,data = fl15_1_wf)
 summary(ano_fl15_wf_1)
 
-###correlation
+###correlation (Spearman)
 install.packages("agricolae")
 library(agricolae)
 cor.table = correlation(dt, method = "spearman")
