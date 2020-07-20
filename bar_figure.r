@@ -1,4 +1,5 @@
 # plot bar figure of genes' functions withn QTLs
+# input file: 1st column as QTL, 2nd column genes' functions with QTL regions
 library(RColorBrewer)
 library(ggplot2)
 mydt = read.csv('test.csv')
