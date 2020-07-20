@@ -5,7 +5,7 @@ tiff("Fig 2.tiff", width = 3600,height = 3580,res = 600)
 par(mar = c(0.01, 0.01, 0.01, 0.01), lwd = 0.3, cex = 0.7)
 #circos.par("track.height" = 0.1)
 circos.par(cell.padding = c(0.02, 0, 0.02, 0))
-#dinitialize the map layout, assign factors and locations
+#Initialize the map layout, assign factors and locations
 circos.initialize(factor=map$LinkAgegroup,x = map$LociPosition)
 #create a rigion/circle for the plot, specify the height of the regions, x-axels as linkage group coordinate
 circos.trackPlotRegion(factors =map$LinkAgegroup,track.height = 0.14,ylim = c(-1.2,1.2),
@@ -32,7 +32,7 @@ for(m in 1:length(QTL[,1])){
   circos.lines(x = c(QTL[m,6],QTL[m,6]),y = c(-5.8,-6), sector.index = QTL[m,2],track.index = 1, lwd = 1, col = 'red')
 }
 
-#epistatic effect qSR.A01-1 - qSR.B07_1-1
+#Plot the epistatic effect/links
 #circos.link(, rou1 = 0.645,rou2 = 0.645, col = "light green")
 circos.link('A05/B05',c(154.011,162.364),'A05/B05',c(168.37,171.017), rou1 = 0.645,rou2 = 0.645, col = "light green")
 circos.link('B02',c(192.484,202.012),'B02',c(202.012,210.84), rou1 = 0.645,rou2 = 0.645, col = "light green")
