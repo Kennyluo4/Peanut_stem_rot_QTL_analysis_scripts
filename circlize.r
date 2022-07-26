@@ -1,3 +1,4 @@
+# Please check the files in the data/ folder for input data formating
 map<-read.csv(file = "mapinfomation.csv",header = TRUE,as.is=TRUE)
 QTL<-read.csv(file = "QTLinfomation.csv",header = TRUE,as.is=TRUE)
 library(circlize)
