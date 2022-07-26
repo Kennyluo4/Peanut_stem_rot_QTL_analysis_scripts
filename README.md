@@ -1,4 +1,4 @@
-# Scripts/logs for the white mold qtl project
+# Scripts for the peanut stem rot QTL project
 
 * Scripts for phenotypic data analysis, QTL/gene data processing and visualization.
 
